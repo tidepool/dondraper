@@ -1,0 +1,14 @@
+{
+  "name": "dondraper",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bourbon": "~3.1.8"
+  }
+}

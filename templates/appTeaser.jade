@@ -1,0 +1,43 @@
+- var appStoreLink = "https://itunes.apple.com/us/app/tidepool/id691052387?ls=1&mt=8"
+- var appIcon = "@@buildDir/images/logo_appicon_2x.png"
+
+
+.appTeaser
+
+  .inner
+
+    .phoneHolder
+
+      a(href=appStoreLink)
+        img.appIcon(src=appIcon, alt="Starfish App Icon")
+
+      .phone
+        b.gloss
+        b.homeButton
+        img.phoneImg(src="@@buildDir/images/iphonebase.png", alt="iPhone Device")
+        .screen
+          b.statusBar
+          .contents
+            img(src="@@buildDir/images/iphone-slide.jpg", alt="Application Features")
+
+
+    .infoHolder
+      .headlineHolder
+        h1.yodel1 Discover your unique personality from 60 different types.
+        h1.yodel2 Play scientifically designed, fun, easy games.
+        h1.yodel3 Track your daily attention &amp; speed.
+        h1.yodel4 Enhance your productivity &amp; quality of life.
+
+      a.appStoreCTA(href=appStoreLink)
+        img.appIcon(src=appIcon, alt="Starfish App Icon")
+        img.appStoreBtn(src="@@buildDir/images/btn_downloadappstore_2x.png", alt="App Store Button", title="Download at the App Store")
+
+
+    .plainSummary
+      a(href=appStoreLink)
+        img.appIcon(src=appIcon, alt="Starfish App Icon")
+      h1 Discover your unique personality from 60 different types.
+      h1 Play scientifically designed, fun, easy games.
+      a.appStoreCTA(href=appStoreLink)
+        img.appStoreBtn(src="@@buildDir/images/btn_downloadappstore_2x.png", alt="App Store Button", title="Download at the App Store")
+

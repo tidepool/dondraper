@@ -1,0 +1,81 @@
+
+
+$fontTitle: 'Karla', 'Open Sans', sans-serif
+$fontBody: 'Karla', 'Open Sans', sans-serif
+
+$fontSizeMegaLarge: 50px
+$fontSizeVeryLarge: 35px
+$fontSizeLarge: 20px
+$fontSizeBody: 16px
+$fontSizeSmall: 14px
+$fontSizeTiny: 11px
+
+$maxSiteWidth: 1220px
+$featuredContentWidth: 620px
+
+$spaceBig: 50px
+$space: 25px
+$spaceLil: 10px
+$spaceTiny: 3px
+
+$radiusTiny: 2px
+$radiusSmall: 4px
+$radiusMed: 10px
+$radiusLarge: 25px
+
+$headerHeight: 60px
+$shortHeaderHeight: 30px
+
+// For Device & Screen responding
+$sizePhone: 603px
+$sizeTablet: 1024px
+
+@mixin phone
+  @media (max-width: $sizePhone)
+    @content
+
+@mixin tablet
+  @media (min-width: $sizePhone+1) and (max-width: $sizeTablet)
+    @content
+
+@mixin desktop
+  @media (min-width: $sizeTablet+1)
+    @content
+
+@mixin tabletAndUp
+  @media (min-width: $sizePhone+1)
+    @content
+
+@mixin phoneAndTablet
+  @media (max-width: $sizeTablet)
+    @content
+
+
+
+
+// IOS browser chrome sizes
+$iosStatusBar: 20px
+$iosNavbar: 44px
+$iosTabBar: 49px
+$iosTotalChrome: $iosStatusBar + $iosNavbar + $iosTabBar
+$iosIphone4: 480px
+$iosIphone4Avail: $iosIphone4 - $iosTotalChrome
+$iosIphone5: 568px
+$iosIphone5Avail: $iosIphone5 - $iosStatusBar
+
+// Less common height detection, useful in some cases
+$heightPhone: $iosIphone5Avail
+$heightTablet: 1024px
+
+@mixin phoneHeightShort
+  @media (max-height: $iosIphone4Avail)
+    @content
+@mixin phoneHeight
+  @media (max-height: $heightPhone)
+    @content
+@mixin tabletHeight
+  @media (min-height: $heightPhone+1) and (max-height: $sizeTablet)
+    @content
+@mixin desktopHeight
+  @media (min-height: $heightTablet+1)
+    @content

@@ -1,0 +1,24 @@
+@import '../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss'
+@import '_appVars.sass'
+@import '_colorVars.sass'
+@import '_helpers.sass'
+
+
+
+.header
+  background: white
+  height: $spaceBig
+  +phone
+    height: $spaceBig - 20
+  .inner
+    max-width: 1000px
+    margin: 0 auto
+    padding-top: 5px
+  // Logo
+  img
+    margin-left: $space
+    +phone
+      height: 20px
+
+.avatar
+  background-image: none

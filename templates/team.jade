@@ -16,31 +16,33 @@ mixin coolPerson(fname,lname,imgName,isSuperCool,tagline)
 
 
 
-h2 Meet the TidePool Team
-p
-  +coolPerson('Galen', 'Buckwalter','galen')
-  +coolPerson('Vamsee','Nalamothu', 'vamsee')
-  +coolPerson('Kerem', 'Karatal',   'kerem')
-  +coolPerson('Miraj', 'Sanghvi',   'miraj')
-  +coolPerson('Eric',  'Miller',    'eric')
-  +coolPerson('Jenni', 'Leder',     'jenni')
-  +coolPerson('Mayank','Sanganeria','mayank')
+.teamArea
 
-hr
+  h2 Meet the TidePool Team
+  p
+    +coolPerson('Galen', 'Buckwalter','galen')
+    +coolPerson('Vamsee','Nalamothu', 'vamsee')
+    +coolPerson('Kerem', 'Karatal',   'kerem')
+    +coolPerson('Miraj', 'Sanghvi',   'miraj')
+    +coolPerson('Eric',  'Miller',    'eric')
+    +coolPerson('Jenni', 'Leder',     'jenni')
+    +coolPerson('Mayank','Sanganeria','mayank')
 
-h2 Our Awesome Investors
+  hr
 
-p
-  +coolPerson('Michael', 'Dearing',   'md',   true, 'Harrison Metal')
-  +coolPerson('Mike',    'Hirshland', 'mike', true, 'Resolute.VC')
-  +coolPerson('Tim',     'Draper',    'tim',  true, 'DFJ')
+  h2 Our Awesome Investors
+
+  p
+    +coolPerson('Michael', 'Dearing',   'md',   true, 'Harrison Metal')
+    +coolPerson('Mike',    'Hirshland', 'mike', true, 'Resolute.VC')
+    +coolPerson('Tim',     'Draper',    'tim',  true, 'DFJ')
+    br
   br
-br
 
 
-h3 And Support From
-p.supercoolPerson.caps
-  | Diego Berdakin, Dan Gould, Rich Rygg, Jeff Lipp, Jarl Mohn,
-  br
-  | Jim & Peggy Davis, Rak Tech Fund, and Amplify
+  h3 And Support From
+  p.supercoolPerson.caps
+    | Diego Berdakin, Dan Gould, Rich Rygg, Jeff Lipp, Jarl Mohn,
+    br
+    | Jim & Peggy Davis, Rak Tech Fund, and Amplify
 

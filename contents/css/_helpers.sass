@@ -1,0 +1,63 @@
+@import '../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss'
+@import '_appVars.sass'
+@import '_colorVars.sass'
+
+@mixin softShadow($color: $shadeVeryLight)
+  //box-shadow: 0 $spaceTiny $space $spaceLil $shadeLight
+  box-shadow: 0 $spaceTiny $spaceBig*2 $spaceBig $color
+
+// This is a bootstrap button factory. Give it a class name and a color and it will build you a shiney bootstrap button override. Wowz.
+// usage: +magicalButton('btn-green', green)
+@mixin magicalButton($btnClassName: 'defaultPink', $color: #f66, $shading: 15, $highlighting: 10)
+  #{$btnClassName}
+    @include linear-gradient( $color, $color - $shading )
+  #{$btnClassName}:hover, #{$btnClassName}:focus
+    @include linear-gradient( $color + $highlighting, $color - $shading )
+  #{$btnClassName}:active, #{$btnClassName}.active,
+  #{$btnClassName}.active:hover
+    @include linear-gradient( $color - $shading, $color - $shading * 2 )
+  #{$btnClassName}.disabled, #{$btnClassName}[disabled],
+  #{$btnClassName}.disabled:hover, #{$btnClassName}[disabled]:hover
+    @include linear-gradient( $color - 100, $color - 115 )
+
+@mixin transitionable($props: all, $speed: 0.15s, $easing: ease-in-out)
+  @include transition ($props $speed $easing)
+
+@mixin floating($distance: $spaceLil, $shadowColor: $shadeLight)
+  box-shadow: $distance / 2 $distance 0 0 $shadowColor
+
+@mixin arrowLeft($color: $colorBrand, $size: $spaceLil)
+  content: ''
+  position: absolute
+  left: -$size
+  top: 50%
+  margin-top: -$size
+  border: $size solid transparent
+  border-left: none
+  border-right-color: $color
+
+@mixin bigassBackground($url: 'images/home_page/homepageblur_bg.jpg', $fallbackColor: tint($colorInfoDark, 50%))
+  background: url($url) no-repeat top center fixed
+  background-color: $fallbackColor
+  background-size: cover
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=$url, sizingMethod='scale')"
+
+@mixin doubleRes
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx)
+    @content
+
+
+//Support 1 and 2x image sizes
+@mixin twiceable($extentionlessUrl, $imgWidth)
+  background-image: url($extentionlessUrl + ".png")
+  +doubleRes
+    background-image: url($extentionlessUrl + "@2x.png")
+    background-size: $imgWidth auto
+
+// Border. Mostly for quick debugging
+@mixin border($color: peru)
+  border: 1px dotted $color
+
+@mixin bg($color: pink)
+  background-color: transparentize($color, .6)
+

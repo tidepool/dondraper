@@ -1,0 +1,28 @@
+@import '_appVars'
+@import '_colorVars'
+@import '_helpers'
+
+
+
+
+// ---------------------------------------- Headings
+h1, h2, h3
+  text-transform: uppercase
+  color: white
+  text-shadow: $spaceTiny 1px $spaceLil $shade, -$spaceTiny 1px $spaceLil $shade, 0 $spaceTiny $spaceLil $shade
+  letter-spacing: .02em
+  line-height: 1.2
+  margin: 0
+h1
+  font-size: $fontSizeMegaLarge
+  margin-bottom: $spaceBig
+  +phone
+    font-size: $fontSizeVeryLarge
+    margin-bottom: $space
+h2
+  font-size: $fontSizeMegaLarge - 5px
+  font-weight: normal
+  margin-bottom: $spaceBig
+  +phone
+    font-size: $fontSizeVeryLarge - 5px
+    margin-bottom: $spaceLil

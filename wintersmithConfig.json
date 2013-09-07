@@ -1,0 +1,27 @@
+{
+  "output": "builtBlog",
+  "locals": {
+    "url": "http://tidepool.co",
+    "name": "TidePool",
+    "owner": "TidePool",
+    "description": "Productivity and Quantified Self in the Prism of Your Personality"
+  },
+  "plugins": [
+    "./plugins/paginator.coffee"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 3
+  }
+}

@@ -1,0 +1,83 @@
+// Tidepool Colors
+$colorBrand: #e43e45
+$colorBrandLight: #e96267
+$colorBrand1: rgb(24,143,244)
+$colorBrand1Light: lighten( $colorBrand1, 17% ) //rgb(101,188,228) //#65bce4
+$colorBrand2: #FABB3D
+$colorBrand3: rgb(248,109,24)
+$colorBrand4: rgb(127,76,174)
+$colorBrand5: rgb(48,101,199)
+
+$colorBrandContrast: $colorBrand1
+$colorBrandContrastLight: #d6efff
+$colorBrandContrastNeutral: #3b3b41
+$colorBrandContrastNeutralLight: $colorBrandContrastNeutral + 170
+$colorBackground: #f5f5f5
+$colorBackgroundWarm: #eae8e5
+$colorBackgroundCool: rgb(199,205,216)
+$colorForeground: #363636
+$colorForegroundCool: rgb(76,87,106)
+$colorForegroundMild: #8b8b8b
+
+// Semantic Colors
+$colorGood: #35a589 //alt version: rgb(28,170,176)
+$colorGoodLight: lighten( $colorGood, 20% )
+$colorGoodMild: lighten($colorGood, 45%)
+$colorGoodThin: transparentize( $colorGood, .88 )
+$colorInfo: #73829d
+$colorInfoLight: #99acd0
+$colorInfoDark: #4c576a
+$colorQuestion: #73829d
+$colorWarn: #d79d51
+$colorWarnBright: $colorBrand2
+$colorBad: $colorBrandLight
+$colorBadThin: transparentize( $colorBad, .88 )
+$colorBadMild: lighten($colorBad, 28%)
+$colorQuiet: #b7b7b7
+$colorVeryQuiet: #dadada
+$colorMegaQuiet: #ececec
+$colorLink: $colorBrand1
+$colorHighlight: $colorWarnBright
+$colorHighlightThin: transparentize( $colorHighlight, .75 )
+$colorFastest: rgb(119,126,142) //$colorGood
+$colorSlowest: $colorBad //lighten($colorGood, 25%)
+
+
+// Blend Colors
+$colorMixBrand1Good: mix( $colorBrand1, $colorGood, 20% )
+$colorMixBrand1GoodLight: lighten( $colorMixBrand1Good, 30% ) //rgb(140,222,220) //#8cdedc
+
+// Named Colors (usually you should access semantically or by brand, but these are useful for the scientific assessments)
+$colorRed: $colorBrand
+$colorBlue: $colorBrand1
+$colorYellow: $colorWarnBright
+$colorGreen: $colorGood
+$colorPurple: $colorBrand4
+
+// 3rd Party Brand Colors
+$colorFacebook: #3b5998 //brandcolors.net //#428ae3
+$colorFitbit: #48c1c4
+$colorLinkedIn: #0e76a8
+$colorGoogle: #db4a39
+$colorTwitter: #00acee
+
+// Gender Colors
+$colorMale: $colorBrandContrast
+$colorFemale: $colorBrand + 50
+
+// Action Colors
+$colorPrimaryAction: $colorBrand
+$colorSecondaryAction: #8796b3
+
+// Shading + Highlighting Colors
+$shadeVeryLight: rgba(0,0,0,0.05)
+$shadeLight: rgba(0,0,0,.1)
+$shade: rgba(0,0,0,.3)
+$shadeDark: rgba(0,0,0,.5)
+
+$highlightVeryThin: rgba(255,255,255, .1)
+$highlightThin: rgba(255,255,255, .3)
+$highlight: rgba(255,255,255, .5)
+$highlightThick: rgba(255,255,255, .8)
+
+
