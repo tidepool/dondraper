@@ -1,0 +1,46 @@
+
+
+mixin coolPerson(fname,lname,imgName,isSuperCool,tagline)
+  div(class=isSuperCool?'supercoolPerson':'coolPerson')
+    i(class=isSuperCool?'avatar large':'avatar huge')
+      img(src="@@buildDir/images/people/"+imgName+".jpg", alt="Photo of #{fname} #{lname}")
+    p
+      if isSuperCool
+        = fname + ' ' + lname
+      else
+        =fname
+        br
+        =lname
+    if tagline
+      p.muted= tagline
+
+
+
+h2 Meet the TidePool Team
+p
+  +coolPerson('Galen', 'Buckwalter','galen')
+  +coolPerson('Vamsee','Nalamothu', 'vamsee')
+  +coolPerson('Kerem', 'Karatal',   'kerem')
+  +coolPerson('Miraj', 'Sanghvi',   'miraj')
+  +coolPerson('Eric',  'Miller',    'eric')
+  +coolPerson('Jenni', 'Leder',     'jenni')
+  +coolPerson('Mayank','Sanganeria','mayank')
+
+hr
+
+h2 Our Awesome Investors
+
+p
+  +coolPerson('Michael', 'Dearing',   'md',   true, 'Harrison Metal')
+  +coolPerson('Mike',    'Hirshland', 'mike', true, 'Resolute.VC')
+  +coolPerson('Tim',     'Draper',    'tim',  true, 'DFJ')
+  br
+br
+
+
+h3 And Support From
+p.supercoolPerson.caps
+  | Diego Berdakin, Dan Gould, Rich Rygg, Jeff Lipp, Jarl Mohn,
+  br
+  | Jim & Peggy Davis, Rak Tech Fund, and Amplify
+

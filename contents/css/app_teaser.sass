@@ -1,0 +1,233 @@
+@import '../../styles/appVars'
+@import '../../styles/colorVars'
+@import '../../styles/helpers'
+
+
+
+.appTeaser
+  $animSpeed: 16s
+  margin: 0 auto
+  max-width: 1000px
+  padding: $space 0
+  padding-bottom: $space * 3
+  +tabletAndUp
+    padding: $spaceBig 0
+    padding-bottom: $spaceBig * 3
+
+
+
+  // ------------------------------------------------------ Major Structure
+  .plainSummary
+    display: none
+  .phoneHolder, .infoHolder
+    vertical-align: top
+    display: block
+    +tabletAndUp
+      display: table-cell
+
+  .infoHolder
+    width: 100%
+
+
+  // ------------------------------------------------------ Phone Area
+  .phoneHolder
+    text-align: center
+    +tablet
+      padding-left: $spaceLil
+    +desktop
+      padding-left: $space
+
+    .appIcon
+      width: 72px
+      +tabletAndUp
+        display: none
+
+  .phone
+    +phone
+      display: none // If the viewer is using a phone, hide all the phone visuals
+    +tabletAndUp
+      position: relative
+      width: 295px // visual phone shape size
+      height: 627px
+      border-radius: 38px
+      background: black
+      box-shadow: 0 3px 2px 1px $shade, inset 0 0 0 3px #444, inset 0 0 0 5px #111
+
+
+    .gloss
+      position: absolute
+      top: 5px
+      left: 5px
+      right: 5px
+      bottom: 5px
+      border-radius: 33px
+      +linear-gradient( -155deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100% )
+
+    .homeButton
+      position: absolute
+      width: 60px
+      height: 60px
+      top: 553px
+      left: 117px
+      overflow: hidden
+      border-radius: 100px
+      box-shadow: rgba(255,255,255,0.1) 0 0 0 1px,inset rgba(0,0,0,0.2) 0 0 0 1px,inset rgba(0,0,0,0.1) 0 0 20px 1px,inset rgba(255,255,255,0.1) 0 -60px 1px -42px
+      &:after
+        content: ''
+        position: absolute
+        width: 15px
+        height: 15px
+        border: 2px solid #838483
+        left: 21px
+        top: 21px
+        border-radius: 4px
+
+    .phoneImg
+      position: absolute
+      top: -11px
+      left: -12px
+
+    .screen
+      overflow: hidden
+      width: 254px
+      margin: 0 auto
+      +tabletAndUp
+        position: absolute
+        height: 450px
+        left: 22px
+        top: 88px
+        border-radius: 3px
+        box-shadow: inset 1px 1px 0 0 $shadeDark, inset -1px -1px 0 0 #222
+        background: #444
+
+    .screen .statusBar
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 17px
+      background: #222
+
+
+    .screen .contents
+      position: relative
+      +animation(electricSlide $animSpeed infinite)
+      +tabletAndUp
+        margin-top: 16px
+        height: 433px
+
+
+
+  // ------------------------------------------------------ Headline Area
+  .infoHolder
+    +phone
+      text-align: center
+
+  .headlineHolder
+    position: relative
+    overflow: hidden
+    height: 120px
+    +tabletAndUp
+      height: 400px
+
+  .headlineHolder h1
+    position: absolute
+    top: 0
+    +phone
+      font-size: $fontSizeVeryLarge - 10
+      padding: 0 $spaceTiny
+    +tabletAndUp
+      width: 100%
+      top: $space * 6
+      left: 0
+      +box-sizing(border-box)
+      padding-left: $spaceBig
+    +tablet
+      padding-left: $space
+      font-size: $fontSizeMegaLarge - 10px
+    &.yodel2, &.yodel3, &.yodel4
+      opacity: .02
+    &.yodel1
+      opacity: .99
+      +animation(homelessManYodeling1 $animSpeed infinite)
+    &.yodel2
+      +animation(homelessManYodeling2 $animSpeed infinite)
+    &.yodel3
+      +animation(homelessManYodeling3 $animSpeed infinite)
+    &.yodel4
+      +animation(homelessManYodeling4 $animSpeed infinite)
+
+  .appStoreBtn
+    height: 52px
+  .appStoreCTA
+    img
+      vertical-align: middle
+    +tablet
+      margin-left: $space
+    +desktop
+      margin-left: $spaceBig
+    .appIcon
+      width: 72px
+      margin-right: $spaceLil
+      +phone
+        display: none
+
+// ------------------------------------------------------ Animations
+$moveAmnt: 264px
++keyframes(electricSlide)
+  0%, 23%
+    margin-left: 0
+  25%, 48%
+    margin-left: -$moveAmnt
+  50%, 73%
+    margin-left: -$moveAmnt*2
+  75%, 98%
+    margin-left: -$moveAmnt*3
+
+// The headlines have a custom animation for each heading. 4 in all.
+$farFarAway: 1000px
+=offLeft
+  left: -$farFarAway
+  opacity: .001
+=offRight
+  //left: $farFarAway
+  //opacity: .2
+  left: 0
+  opacity: .001
++keyframes(homelessManYodeling1)
+  0%, 23%
+    left: 0
+    opacity: .99
+  25%
+    +offRight
+  26%, 98%
+    +offRight
++keyframes(homelessManYodeling2)
+  25%, 48%
+    left: 0
+    opacity: 1
+  50%
+    +offRight
+  51%, 23%
+    +offRight
++keyframes(homelessManYodeling3)
+  50%, 73%
+    left: 0
+    opacity: 1
+  75%
+    +offRight
+  76%, 48%
+    +offRight
++keyframes(homelessManYodeling4)
+  75%, 98%
+    left: 0
+    opacity: 1
+  100%
+    +offRight
+  1%, 73%
+    +offRight
+
+
+
+
+

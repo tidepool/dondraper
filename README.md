@@ -1,4 +1,4 @@
-dondraper
-=========
 
-The Marketing Web Site
+# Blog
+
+The default [wintersmith](https://github.com/jnordberg/wintersmith) template

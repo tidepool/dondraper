@@ -1,0 +1,47 @@
+@import '../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss'
+@import '_appVars.sass'
+@import '_colorVars.sass'
+@import '_helpers.sass'
+
+.avatar
+  display: inline-block
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  overflow: hidden // make all images circles
+  background-image: url('images/brand.png')
+  background-position: -402px -25px
+  +phone
+    width: 25px
+    height: 25px
+    background-position: -201px -12px // Half the position offset
+    background-size: 279px            // Half the actual image size
+
+  &.large
+    width: 100px
+    height: 100px
+    background-position: 0 -75px
+    background-size: auto
+    //background-size: 400px
+  &.large img
+    width: 100%
+
+  &.huge
+    width: 140px
+    height: 140px
+    background: none
+  //&.large img
+  //  width: 100%
+
+  &.interactive
+    cursor: pointer
+    +transitionable
+    box-shadow: 0 0 $colorInfo
+    border: 1px solid white
+  &.interactive:hover
+    border: 1px solid $colorInfo
+    @include transform(translateY(- $spaceTiny))
+    box-shadow: 0 $spaceTiny $colorInfo
+
+.modal .avatar
+  margin-bottom: $spaceLil
