@@ -20,6 +20,10 @@ body {
     body {
       background: #4c576a; } }
 
+@media (min-width: 1025px) {
+  .content {
+    min-height: 500px; } }
+
 hr {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.5);

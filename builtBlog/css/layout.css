@@ -3,6 +3,9 @@ h1, h2, h3, h4, h5, h6, p, body, a, img, blockquote, pre {
   padding: 0;
   border: 0; }
 
+img {
+  max-width: 100%; }
+
 body {
   margin: 0;
   padding: 0;
@@ -19,6 +22,10 @@ body {
   @media (max-width: 603px) {
     body {
       background: #4c576a; } }
+
+@media (min-width: 1025px) {
+  .content {
+    min-height: 500px; } }
 
 hr {
   height: 1px;

@@ -1,0 +1,22 @@
+.aboutPage .content {
+  padding: 50px 0;
+  text-align: center; }
+
+.aboutPage .col3rds {
+  padding: 10px; }
+.aboutPage section {
+  text-align: center;
+  margin-bottom: 50px; }
+.aboutPage section p {
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px 25px;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 20px; }
+@media all and (min-width: 801px) {
+  .aboutPage section p {
+    min-height: 6em;
+    margin-bottom: 25px; } }
+.aboutPage hr {
+  margin-bottom: 50px; }

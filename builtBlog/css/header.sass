@@ -8,16 +8,37 @@
 .header
   background: white
   height: $spaceBig
+  line-height: $spaceBig
   +phone
     height: $spaceBig - 20
+    line-height: $spaceBig - 20
   .inner
     max-width: 1000px
     margin: 0 auto
-    padding-top: 5px
+
+  a
+    display: inline-block
+    vertical-align: middle
+    text-transform: uppercase
+    color: $colorForegroundMild
+    text-decoration: none
+    margin-right: $spaceLil
+  a.navItem
+    padding: 0 $space
+    +phone
+      padding: 0 $spaceLil
+  a.navItem:hover
+    text-decoration: underline
+    color: $colorForeground
+
+
   // Logo
   img
     margin-left: $space
+    vertical-align: middle
+    margin-right: $spaceLil
     +phone
+      margin-right: $spaceTiny
       height: 20px
 
 .avatar
