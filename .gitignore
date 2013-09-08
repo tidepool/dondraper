@@ -10,7 +10,6 @@ src/static/bower_components
 .devServer
 .site
 .env.json
-*.css
 *.css.map
 !gfx.css
 *.js
