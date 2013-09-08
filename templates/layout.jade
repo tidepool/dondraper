@@ -12,7 +12,7 @@ html(lang='en')
         block title
           = locals.name
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
-      link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Karla:400,700)
+      link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Karla:400,700')
       link(rel='stylesheet', href='/@@buildDir/all-min.css')
 
   body(class=bodyclass)
@@ -23,10 +23,5 @@ html(lang='en')
       block content
         p Default content block contents.
 
-    //footer
-    //  div.content-wrap
-    //    block footer
-    //      p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
-    //        a(href='https://github.com/jnordberg/wintersmith') Wintersmith
 
     include footer
