@@ -1,0 +1,18 @@
+.header {
+  background: white;
+  height: 50px; }
+  @media (max-width: 603px) {
+    .header {
+      height: 30px; } }
+  .header .inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 5px; }
+  .header img {
+    margin-left: 25px; }
+    @media (max-width: 603px) {
+      .header img {
+        height: 20px; } }
+
+.avatar {
+  background-image: none; }

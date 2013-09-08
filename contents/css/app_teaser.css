@@ -1,0 +1,439 @@
+.appTeaser {
+  padding: 25px 0;
+  padding-bottom: 75px;
+  background: url("images/homepage_bg.jpg") no-repeat top center fixed;
+  background-color: #a5abb4;
+  background-size: cover;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=$url, sizingMethod='scale')";
+  background-size: cover; }
+  @media (min-width: 604px) {
+    .appTeaser {
+      padding: 50px 0;
+      padding-bottom: 150px; } }
+  @media (max-width: 603px) {
+    .appTeaser {
+      background: url("images/phone_bg_blur.jpg") no-repeat top center; } }
+  .appTeaser .inner {
+    margin: 0 auto;
+    max-width: 1000px; }
+  .appTeaser .plainSummary {
+    display: none; }
+  .appTeaser .phoneHolder, .appTeaser .infoHolder {
+    vertical-align: top;
+    display: block; }
+    @media (min-width: 604px) {
+      .appTeaser .phoneHolder, .appTeaser .infoHolder {
+        display: table-cell; } }
+  .appTeaser .infoHolder {
+    width: 100%; }
+  .appTeaser .phoneHolder {
+    text-align: center; }
+    @media (min-width: 604px) and (max-width: 1024px) {
+      .appTeaser .phoneHolder {
+        padding-left: 10px; } }
+    @media (min-width: 1025px) {
+      .appTeaser .phoneHolder {
+        padding-left: 25px; } }
+    .appTeaser .phoneHolder .appIcon {
+      width: 72px; }
+      @media (min-width: 604px) {
+        .appTeaser .phoneHolder .appIcon {
+          display: none; } }
+  @media (max-width: 603px) {
+    .appTeaser .phone {
+      display: none; } }
+  @media (min-width: 604px) {
+    .appTeaser .phone {
+      position: relative;
+      width: 295px;
+      height: 627px;
+      border-radius: 38px;
+      background: black;
+      box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.3), inset 0 0 0 3px #444444, inset 0 0 0 5px #111111; } }
+  .appTeaser .phone .gloss {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 33px;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(50%, rgba(255, 255, 255, 0.05)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background-image: -webkit-linear-gradient(-115deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(-155deg,rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%); }
+  .appTeaser .phone .homeButton {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 553px;
+    left: 117px;
+    overflow: hidden;
+    border-radius: 100px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px, inset rgba(0, 0, 0, 0.2) 0 0 0 1px, inset rgba(0, 0, 0, 0.1) 0 0 20px 1px, inset rgba(255, 255, 255, 0.1) 0 -60px 1px -42px; }
+    .appTeaser .phone .homeButton:after {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border: 2px solid #838483;
+      left: 21px;
+      top: 21px;
+      border-radius: 4px; }
+  .appTeaser .phone .phoneImg {
+    position: absolute;
+    top: -11px;
+    left: -12px; }
+  .appTeaser .phone .screen {
+    overflow: hidden;
+    width: 254px;
+    margin: 0 auto; }
+    @media (min-width: 604px) {
+      .appTeaser .phone .screen {
+        position: absolute;
+        height: 450px;
+        left: 22px;
+        top: 88px;
+        border-radius: 3px;
+        box-shadow: inset 1px 1px 0 0 rgba(0, 0, 0, 0.5), inset -1px -1px 0 0 #222222;
+        background: #444444; } }
+  .appTeaser .phone .screen .statusBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 17px;
+    background: #222222; }
+  .appTeaser .phone .screen .contents {
+    position: relative;
+    -webkit-animation: electricSlide 16s infinite;
+    -moz-animation: electricSlide 16s infinite;
+    animation: electricSlide 16s infinite; }
+    @media (min-width: 604px) {
+      .appTeaser .phone .screen .contents {
+        margin-top: 16px;
+        height: 433px; } }
+  @media (max-width: 603px) {
+    .appTeaser .infoHolder {
+      text-align: center; } }
+  .appTeaser .headlineHolder {
+    position: relative;
+    overflow: hidden;
+    height: 120px; }
+    @media (min-width: 604px) {
+      .appTeaser .headlineHolder {
+        height: 400px; } }
+  .appTeaser .headlineHolder h1 {
+    position: absolute;
+    top: 0; }
+    @media (max-width: 603px) {
+      .appTeaser .headlineHolder h1 {
+        font-size: 25px;
+        padding: 0 3px; } }
+    @media (min-width: 604px) {
+      .appTeaser .headlineHolder h1 {
+        width: 100%;
+        top: 150px;
+        left: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 50px; } }
+    @media (min-width: 604px) and (max-width: 1024px) {
+      .appTeaser .headlineHolder h1 {
+        padding-left: 25px;
+        font-size: 40px; } }
+    .appTeaser .headlineHolder h1.yodel2, .appTeaser .headlineHolder h1.yodel3, .appTeaser .headlineHolder h1.yodel4 {
+      opacity: 0.02; }
+    .appTeaser .headlineHolder h1.yodel1 {
+      opacity: 0.99;
+      -webkit-animation: homelessManYodeling1 16s infinite;
+      -moz-animation: homelessManYodeling1 16s infinite;
+      animation: homelessManYodeling1 16s infinite; }
+    .appTeaser .headlineHolder h1.yodel2 {
+      -webkit-animation: homelessManYodeling2 16s infinite;
+      -moz-animation: homelessManYodeling2 16s infinite;
+      animation: homelessManYodeling2 16s infinite; }
+    .appTeaser .headlineHolder h1.yodel3 {
+      -webkit-animation: homelessManYodeling3 16s infinite;
+      -moz-animation: homelessManYodeling3 16s infinite;
+      animation: homelessManYodeling3 16s infinite; }
+    .appTeaser .headlineHolder h1.yodel4 {
+      -webkit-animation: homelessManYodeling4 16s infinite;
+      -moz-animation: homelessManYodeling4 16s infinite;
+      animation: homelessManYodeling4 16s infinite; }
+  .appTeaser .appStoreBtn {
+    height: 52px; }
+  .appTeaser .appStoreCTA img {
+    vertical-align: middle; }
+  @media (min-width: 604px) and (max-width: 1024px) {
+    .appTeaser .appStoreCTA {
+      margin-left: 25px; } }
+  @media (min-width: 1025px) {
+    .appTeaser .appStoreCTA {
+      margin-left: 50px; } }
+  .appTeaser .appStoreCTA .appIcon {
+    width: 72px;
+    margin-right: 10px; }
+    @media (max-width: 603px) {
+      .appTeaser .appStoreCTA .appIcon {
+        display: none; } }
+
+@-webkit-keyframes electricSlide {
+  0%, 23% {
+    margin-left: 0; }
+
+  25%, 48% {
+    margin-left: -264px; }
+
+  50%, 73% {
+    margin-left: -528px; }
+
+  75%, 98% {
+    margin-left: -792px; } }
+
+@-moz-keyframes electricSlide {
+  0%, 23% {
+    margin-left: 0; }
+
+  25%, 48% {
+    margin-left: -264px; }
+
+  50%, 73% {
+    margin-left: -528px; }
+
+  75%, 98% {
+    margin-left: -792px; } }
+
+@-o-keyframes electricSlide {
+  0%, 23% {
+    margin-left: 0; }
+
+  25%, 48% {
+    margin-left: -264px; }
+
+  50%, 73% {
+    margin-left: -528px; }
+
+  75%, 98% {
+    margin-left: -792px; } }
+
+@keyframes electricSlide {
+  0%, 23% {
+    margin-left: 0; }
+
+  25%, 48% {
+    margin-left: -264px; }
+
+  50%, 73% {
+    margin-left: -528px; }
+
+  75%, 98% {
+    margin-left: -792px; } }
+
+@-webkit-keyframes homelessManYodeling1 {
+  0%, 23% {
+    left: 0;
+    opacity: 0.99; }
+
+  25% {
+    left: 0;
+    opacity: 0.001; }
+
+  26%, 98% {
+    left: 0;
+    opacity: 0.001; } }
+
+@-moz-keyframes homelessManYodeling1 {
+  0%, 23% {
+    left: 0;
+    opacity: 0.99; }
+
+  25% {
+    left: 0;
+    opacity: 0.001; }
+
+  26%, 98% {
+    left: 0;
+    opacity: 0.001; } }
+
+@-o-keyframes homelessManYodeling1 {
+  0%, 23% {
+    left: 0;
+    opacity: 0.99; }
+
+  25% {
+    left: 0;
+    opacity: 0.001; }
+
+  26%, 98% {
+    left: 0;
+    opacity: 0.001; } }
+
+@keyframes homelessManYodeling1 {
+  0%, 23% {
+    left: 0;
+    opacity: 0.99; }
+
+  25% {
+    left: 0;
+    opacity: 0.001; }
+
+  26%, 98% {
+    left: 0;
+    opacity: 0.001; } }
+
+@-webkit-keyframes homelessManYodeling2 {
+  25%, 48% {
+    left: 0;
+    opacity: 1; }
+
+  50% {
+    left: 0;
+    opacity: 0.001; }
+
+  51%, 23% {
+    left: 0;
+    opacity: 0.001; } }
+
+@-moz-keyframes homelessManYodeling2 {
+  25%, 48% {
+    left: 0;
+    opacity: 1; }
+
+  50% {
+    left: 0;
+    opacity: 0.001; }
+
+  51%, 23% {
+    left: 0;
+    opacity: 0.001; } }
+
+@-o-keyframes homelessManYodeling2 {
+  25%, 48% {
+    left: 0;
+    opacity: 1; }
+
+  50% {
+    left: 0;
+    opacity: 0.001; }
+
+  51%, 23% {
+    left: 0;
+    opacity: 0.001; } }
+
+@keyframes homelessManYodeling2 {
+  25%, 48% {
+    left: 0;
+    opacity: 1; }
+
+  50% {
+    left: 0;
+    opacity: 0.001; }
+
+  51%, 23% {
+    left: 0;
+    opacity: 0.001; } }
+
+@-webkit-keyframes homelessManYodeling3 {
+  50%, 73% {
+    left: 0;
+    opacity: 1; }
+
+  75% {
+    left: 0;
+    opacity: 0.001; }
+
+  76%, 48% {
+    left: 0;
+    opacity: 0.001; } }
+
+@-moz-keyframes homelessManYodeling3 {
+  50%, 73% {
+    left: 0;
+    opacity: 1; }
+
+  75% {
+    left: 0;
+    opacity: 0.001; }
+
+  76%, 48% {
+    left: 0;
+    opacity: 0.001; } }
+
+@-o-keyframes homelessManYodeling3 {
+  50%, 73% {
+    left: 0;
+    opacity: 1; }
+
+  75% {
+    left: 0;
+    opacity: 0.001; }
+
+  76%, 48% {
+    left: 0;
+    opacity: 0.001; } }
+
+@keyframes homelessManYodeling3 {
+  50%, 73% {
+    left: 0;
+    opacity: 1; }
+
+  75% {
+    left: 0;
+    opacity: 0.001; }
+
+  76%, 48% {
+    left: 0;
+    opacity: 0.001; } }
+
+@-webkit-keyframes homelessManYodeling4 {
+  75%, 98% {
+    left: 0;
+    opacity: 1; }
+
+  100% {
+    left: 0;
+    opacity: 0.001; }
+
+  1%, 73% {
+    left: 0;
+    opacity: 0.001; } }
+
+@-moz-keyframes homelessManYodeling4 {
+  75%, 98% {
+    left: 0;
+    opacity: 1; }
+
+  100% {
+    left: 0;
+    opacity: 0.001; }
+
+  1%, 73% {
+    left: 0;
+    opacity: 0.001; } }
+
+@-o-keyframes homelessManYodeling4 {
+  75%, 98% {
+    left: 0;
+    opacity: 1; }
+
+  100% {
+    left: 0;
+    opacity: 0.001; }
+
+  1%, 73% {
+    left: 0;
+    opacity: 0.001; } }
+
+@keyframes homelessManYodeling4 {
+  75%, 98% {
+    left: 0;
+    opacity: 1; }
+
+  100% {
+    left: 0;
+    opacity: 0.001; }
+
+  1%, 73% {
+    left: 0;
+    opacity: 0.001; } }

@@ -1,0 +1,27 @@
+.muted {
+  color: #b7b7b7; }
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 3px 1px 10px rgba(0, 0, 0, 0.3), -3px 1px 10px rgba(0, 0, 0, 0.3), 0 3px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  margin: 0; }
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 50px; }
+  @media (max-width: 603px) {
+    h1 {
+      font-size: 35px;
+      margin-bottom: 25px; } }
+
+h2 {
+  font-size: 45px;
+  font-weight: normal;
+  margin-bottom: 50px; }
+  @media (max-width: 603px) {
+    h2 {
+      font-size: 30px;
+      margin-bottom: 10px; } }

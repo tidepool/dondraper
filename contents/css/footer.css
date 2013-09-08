@@ -1,0 +1,9 @@
+.footer {
+  background: white;
+  min-height: 50px;
+  padding: 0 10px;
+  line-height: 50px; }
+  .footer .muted a {
+    color: #b7b7b7; }
+  .footer p {
+    margin-bottom: 0; }

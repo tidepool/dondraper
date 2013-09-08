@@ -1,0 +1,12 @@
+.ie8 body {
+  font-family: verdana, arial, helvetica, sans-serif;
+  background-image: none;
+  background: #4c576a; }
+.ie8 .appTeaser .phoneHolder, .ie8 .appTeaser .infoHolder {
+  display: none; }
+.ie8 .appTeaser .plainSummary {
+  position: relative;
+  display: block;
+  text-align: center; }
+.ie8 .appTeaser .appStoreCTA {
+  margin-left: 0 !important; }

@@ -1,0 +1,25 @@
+.avatar {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-image: url("images/brand.png");
+  background-position: -402px -25px; }
+  @media (max-width: 603px) {
+    .avatar {
+      width: 25px;
+      height: 25px;
+      background-position: -201px -12px;
+      background-size: 279px; } }
+  .avatar.large {
+    width: 100px;
+    height: 100px;
+    background-position: 0 -75px;
+    background-size: auto; }
+  .avatar.large img {
+    width: 100%; }
+  .avatar.huge {
+    width: 140px;
+    height: 140px;
+    background: none; }
