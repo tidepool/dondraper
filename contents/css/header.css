@@ -9,7 +9,7 @@
   .header .inner {
     max-width: 1000px;
     margin: 0 auto; }
-  .header a {
+  .header a, .header a:visited {
     display: inline-block;
     vertical-align: middle;
     text-transform: uppercase;
