@@ -8,11 +8,12 @@ block prepend title
   | #{ page.title + " - "}
 
 block content
-  article.article
-    section.content!= typogr(page.html).typogrify()
+  .contentWrap
+    h1.articleTitle= page.title
+    .page
+      != typogr(page.html).typogrify()
 
 block prepend footer
-  div.nav
-    a(href=contents.index.url) « Full blog
-
+  .nav.bottom
+    a(href='/blog.html') « Blog
 

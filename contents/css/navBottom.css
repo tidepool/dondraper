@@ -1,0 +1,10 @@
+.nav.bottom {
+  margin: 0 auto;
+  background: white;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 25px;
+  border-radius: 5px; }
+  .nav.bottom a {
+    color: #8b8b8b;
+    margin: 10px 0; }
