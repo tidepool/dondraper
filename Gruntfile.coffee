@@ -132,7 +132,7 @@ module.exports = (grunt) ->
       deployStatic: files: [
           expand: true
           cwd: "<%= cfg.site.target %>"
-          src: [ '**', '!**/*.gz' ]
+          src: [ '**' ]
           dest: "<%= cfg.site.subdir') %>"
         ]
 
