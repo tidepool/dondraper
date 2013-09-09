@@ -24,6 +24,23 @@ body {
   .content {
     min-height: 500px; } }
 
+.contentWrap {
+  margin: 0 auto;
+  max-width: 1000px; }
+
+.page {
+  padding: 25px;
+  margin: 25px 0;
+  background: white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
+  @media (min-width: 1025px) {
+    .page {
+      background: rgba(255, 255, 255, 0.8); } }
+  @media (max-width: 603px) {
+    .page {
+      padding: 10px;
+      margin: 0; } }
+
 hr {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.5);
