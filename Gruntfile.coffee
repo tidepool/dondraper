@@ -125,15 +125,15 @@ module.exports = (grunt) ->
         options: params: CacheControl: 'max-age=120' # 2 minutes (60 * 2)
         files: [
           expand: true
-          cwd: "<%= grunt.option('targetParent') %>"
+          cwd: "<%= cfg.site.parent %>"
           src: '*' # all files, but only those in this immediate directory
           dest: '' # putting a slash here will cause '//path' on Amazon
         ]
       deployStatic: files: [
           expand: true
-          cwd: "<%= grunt.option('target') %>"
+          cwd: "<%= cfg.site.target %>"
           src: [ '**', '!**/*.gz' ]
-          dest: "<%= grunt.option('targetSubdir') %>"
+          dest: "<%= cfg.site.subdir') %>"
         ]
 
     exec: wintersmithBuild: cmd: 'wintersmith build --config wintersmithConfig.json'
@@ -163,7 +163,7 @@ module.exports = (grunt) ->
       'copy'              # Move the blog files to the build destination
       'replace:html'      # Replace any build variables in html/css files
       'concat'            # merge css files together
-#      'cssmin'           # and make them so so tiny small
+      'cssmin'            # and make them so so tiny small
       'clean:unusedFiles' # Files that we don't actually need for distribution
     ]
 
@@ -192,7 +192,7 @@ module.exports = (grunt) ->
   # ---------------------------------------------------------------------- Task Shortcuts
   grunt.registerTask "fullBuild", [ 'winter', 'build' ]
   grunt.registerTask "f", [ 'clean', 'fullBuild', 'server' ]
-  grunt.registerTask "default", 'build server'
+  grunt.registerTask "default", 'f'
 
 
   # ---------------------------------------------------------------------- Set the output path for built files.
