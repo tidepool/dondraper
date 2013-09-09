@@ -133,7 +133,7 @@ module.exports = (grunt) ->
           expand: true
           cwd: "<%= cfg.site.target %>"
           src: [ '**' ]
-          dest: "<%= cfg.site.subdir') %>"
+          dest: "<%= cfg.site.subdir %>"
         ]
 
     exec: wintersmithBuild: cmd: 'wintersmith build --config wintersmithConfig.json'
