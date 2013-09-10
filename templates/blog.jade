@@ -10,12 +10,12 @@ block content
             .date.muted
               span= moment(article.date).format('DD. MMMM YYYY')
             h2
-              a(href=article.url)= article.title
+              a(href=article.url+'index.html')= article.title
           .summary
             !{ typogr(article.intro).typogrify() }
             if article.hasMore
               p.more
-                a(href=article.url) more
+                a(href=article.url+'index.html') more
 
 block prepend footer
   .nav.bottom
