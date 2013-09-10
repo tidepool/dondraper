@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="personality,mindfulness,quantified self,psychology">
+    <meta name="description" content="Fun, scientifically validated games help you discover your personality and other traits.">
+    <script>window.pageLoadStart = (new Date()).getTime()</script>
     <title>TidePool
     </title>
     <link rel="alternate" href="http://tidepool.co/feed.xml" type="application/rss+xml" title="Productivity and Quantified Self in the Prism of Your Personality">
@@ -104,5 +106,46 @@
         &nbsp; &mdash; &nbsp;<a href="/toc.html">Terms &amp; Conditions</a>&nbsp; &mdash; &nbsp;<a href="/privacy.html">Privacy Policy</a>
       </p>
     </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', '@@googleAnalyticsKey', 'tidepool.co');
+      ga('send', 'pageview');
+      
+      
+      // Track Site Performance
+      trackPerf = function(){ // Wait until the performance numbers come in before we log them
+          var data = {}
+          if(performance && performance.timing) {
+              data.latency =       performance.timing.responseEnd  - performance.timing.fetchStart;
+              data.pageLoad =      performance.timing.loadEventEnd - performance.timing.responseEnd;
+              data.totalLoadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+              ga('send', 'event', {
+                  eventCategory: 'performance',
+                  eventAction: 'log',
+                  eventLabel: 'latency',
+                  eventValue: data.latency
+              });
+              ga('send', 'event', {
+                  eventCategory: 'performance',
+                  eventAction: 'log',
+                  eventLabel: 'pageLoad',
+                  eventValue: data.pageLoad
+              });
+          } else {
+              if (window.pageLoadStart) { data.totalLoadTime = (new Date()).getTime() - window.pageLoadStart }
+          };
+          ga('send', 'event', {
+              eventCategory: 'performance',
+              eventAction: 'log',
+              eventLabel: 'totalLoadTime',
+              eventValue: data.totalLoadTime
+          });
+      }
+      window.onload=trackPerf
+    </script>
   </body>
 </html>

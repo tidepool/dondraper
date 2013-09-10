@@ -25,7 +25,7 @@ module.exports = (grunt) ->
 
 
   grunt.initConfig
-    cfg: buildConfig
+    cfg:    buildConfig
     winter: grunt.file.readJSON 'wintersmithConfig.json'
     env:    grunt.file.readJSON '.env.json'
     pkg:    grunt.file.readJSON 'package.json'
