@@ -121,12 +121,15 @@ module.exports = (grunt) ->
         concurrency: 5 # More power captain!
         params: CacheControl: 'max-age=63072000' # Two Year cache policy (60 * 60 * 24 * 730)#
 
-      deployParent:
+      deployHtml:
         options: params: CacheControl: 'max-age=120' # 2 minutes (60 * 2)
         files: [
           expand: true
           cwd: "<%= cfg.site.parent %>"
-          src: '*' # all files, but only those in this immediate directory
+          src: [
+            '*' # all files, but only those in this immediate directory
+            '**/*.html' # all html files everywhere
+          ]
           dest: '' # putting a slash here will cause '//path' on Amazon
         ]
       deployStatic: files: [
@@ -185,7 +188,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'deploy', 'Moves content from the build folder to AWS S3. Doing a build is a prereq.', ->
     grunt.task.run [
       'aws_s3:deployStatic'
-      'aws_s3:deployParent'
+      'aws_s3:deployHtml'
     ]
 
 
