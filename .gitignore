@@ -16,3 +16,4 @@ bower_components
 *.js.map
 !src/static/scripts/vendor/*.js
 .site
+builtBlog/
