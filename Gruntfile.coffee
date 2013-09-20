@@ -123,7 +123,7 @@ module.exports = (grunt) ->
         params: CacheControl: 'max-age=63072000' # Two Year cache policy (60 * 60 * 24 * 730)#
 
       deployHtml:
-        options: params: CacheControl: 'max-age=120' # 2 minutes (60 * 2)
+        options: params: CacheControl: 'max-age=300' # 5 minutes (60 * 5)
         files: [
           expand: true
           cwd: "<%= cfg.site.parent %>"
