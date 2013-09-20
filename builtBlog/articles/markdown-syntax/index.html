@@ -691,35 +691,39 @@ _   underscore
       
       
       // Track Site Performance
-      trackPerf = function(){ // Wait until the performance numbers come in before we log them
-          var data = {}
-          if(performance && performance.timing) {
-              data.latency =       performance.timing.responseEnd  - performance.timing.fetchStart;
-              data.pageLoad =      performance.timing.loadEventEnd - performance.timing.responseEnd;
-              data.totalLoadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-              ga('send', 'event', {
-                  eventCategory: 'performance',
-                  eventAction: 'log',
-                  eventLabel: 'latency',
-                  eventValue: data.latency
-              });
-              ga('send', 'event', {
-                  eventCategory: 'performance',
-                  eventAction: 'log',
-                  eventLabel: 'pageLoad',
-                  eventValue: data.pageLoad
-              });
-          } else {
-              if (window.pageLoadStart) { data.totalLoadTime = (new Date()).getTime() - window.pageLoadStart }
-          };
-          ga('send', 'event', {
-              eventCategory: 'performance',
-              eventAction: 'log',
-              eventLabel: 'totalLoadTime',
-              eventValue: data.totalLoadTime
-          });
-      }
-      window.onload=trackPerf
+        trackPerf = function(){ // Wait until the performance numbers come in before we log them
+            var data = {}
+            if(performance && performance.timing) {
+                data.latency =       performance.timing.responseEnd  - performance.timing.fetchStart;
+                data.pageLoad =      performance.timing.loadEventEnd - performance.timing.responseEnd;
+                data.totalLoadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+                if( data.latency > 0 && data.pageLoad > 0 && data.totalLoadTime > 0) {
+                    ga('send', 'event', {
+                        eventCategory: 'performance',
+                        eventAction: 'log',
+                        eventLabel: 'latency',
+                        eventValue: data.latency
+                    });
+                    ga('send', 'event', {
+                        eventCategory: 'performance',
+                        eventAction: 'log',
+                        eventLabel: 'pageLoad',
+                        eventValue: data.pageLoad
+                    });
+                    ga('send', 'event', {
+                        eventCategory: 'performance',
+                        eventAction: 'log',
+                        eventLabel: 'totalLoadTime',
+                        eventValue: data.totalLoadTime
+                    });
+                } else {
+                  console.log('negative performance value found, not logged.')
+                  console.log({ performanceData:data })
+                }
+            }
+        }
+        // Wait until we think it's loaded before trying to read performance data
+        setTimeout(trackPerf, 1000)
     </script>
   </body>
 </html>
