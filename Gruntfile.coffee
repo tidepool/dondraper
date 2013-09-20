@@ -118,7 +118,8 @@ module.exports = (grunt) ->
         secretAccessKey: '<%= env.awsSecret %>'
         bucket:          '<%= env.awsBucket %>'
         region:          '<%= env.awsRegion %>'
-        concurrency: 5 # More power captain!
+        concurrency:     5 # More power captain!
+        differential:    true # https://github.com/MathieuLoutre/grunt-aws-s3#optionsdifferential
         params: CacheControl: 'max-age=63072000' # Two Year cache policy (60 * 60 * 24 * 730)#
 
       deployHtml:
