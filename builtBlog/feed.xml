@@ -5,13 +5,13 @@
     <atom:link href="http://tidepool.co/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://tidepool.co</link>
     <description>Productivity and Quantified Self in the Prism of Your Personality</description>
-    <pubDate>Mon, 29 Apr 2013 18:00:00 -0600</pubDate>
+    <pubDate>Mon, 29 Apr 2013 17:00:00 -0700</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
       <title>README</title>
       <link>http://tidepool.co/articles/hello-world/</link>
-      <pubDate>Mon, 29 Apr 2013 18:00:00 -0600</pubDate>
+      <pubDate>Mon, 29 Apr 2013 17:00:00 -0700</pubDate>
       <guid isPermaLink="true">http://tidepool.co/articles/hello-world/</guid>
       <author></author>
       <description>&lt;p&gt;Welcome to your new blog! This is the default blog template with RSS, pagination and an archive. There are other templates available — run &lt;code&gt;wintersmith new --help&lt;/code&gt; to list them.&lt;/p&gt;
@@ -75,7 +75,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/cod
     <item>
       <title>Markdown syntax</title>
       <link>http://tidepool.co/articles/markdown-syntax/</link>
-      <pubDate>Wed, 01 Feb 2012 17:00:00 -0700</pubDate>
+      <pubDate>Wed, 01 Feb 2012 16:00:00 -0800</pubDate>
       <guid isPermaLink="true">http://tidepool.co/articles/markdown-syntax/</guid>
       <author></author>
       <description>&lt;p&gt;Full markdown syntax taken from John Gruber&amp;#39;s &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;Daring Fireball&lt;/a&gt;.
